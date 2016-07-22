@@ -8,7 +8,7 @@ The lib also use a custom menu that have several advantages such as:
 - A note system
 - A better looking menu which can print 18 lines instead of 10
 
-The dev version of the lib also include a Debug Menu that shows severals infos including a logger.
+The debug version of the lib also include a Debug Menu that shows severals infos including a logger.
 With the logger you can easily trace your plugin execution and print infos which can lead to a fast debugging.
 The logger have 4 types entry:
 - INFO
