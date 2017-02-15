@@ -3,6 +3,10 @@
 
 #include "plugin.h"
 
+
+#define		ADD16(addr, value)					*(u16 *)addr += value
+#define		SUB16(addr, value)					*(u16 *)addr -= value
+
 void	unlock_kokiri_sword();
 void	unlock_excalibur_sword();
 void	unlock_biggoron_sword();
@@ -69,5 +73,14 @@ void	open_any_chest_in_the_game_as_many_times(void);
 void	collect_heart_pieces_in_overworld_as_many(void);
 void	always_have_nayrus_love_activated(void);
 void	never_take_damage_from_falling(void);
+void	use_all_items(void);
+void	unlock_all_items(void);
+void	timeMod(void);
+void	infinite_explosives(void);
+void	coloredGaunlet_common(u8 value);
+void	purple_gaunlet(void);
+void	green_gaunlet(void);
+void	blue_gaunlet(void);
+void	black_gaunlet(void);
 
 #endif

@@ -517,3 +517,79 @@ void	never_take_damage_from_falling(void)
 {
 	WRITEU32(0x098F7290, 0x00000000);
 }
+
+void 	use_all_items(void)
+{
+	for (int i = 0; i < 0x56; i++)
+	{
+		WRITEU8(0x506C58 + i, 0x09);
+	}
+}
+
+void	unlock_all_items(void)
+{
+	WRITEU8(0x5879E4, 0x00);
+	WRITEU8(0x5879E5, 0x01);
+	WRITEU8(0x5879E6, 0x02);
+	WRITEU8(0x5879E7, 0x03);
+	WRITEU8(0x5879E8, 0x09);
+	WRITEU8(0x5879E9, 0x05);
+	WRITEU8(0x5879EA, 0x06);
+	WRITEU8(0x5879EB, 0x08);
+	WRITEU8(0x5879EC, 0x0B);
+	WRITEU8(0x5879ED, 0x0D);
+	WRITEU8(0x5879EE, 0x0E);
+	WRITEU8(0x5879EF, 0x0F);
+	WRITEU8(0x5879F0, 0x10);
+	WRITEU8(0x5879F1, 0x11);
+	WRITEU8(0x5879F2, 0x11);
+	WRITEU8(0x5879F3, 0x12);
+	WRITEU8(0x5879F4, 0x04);
+	WRITEU8(0x5879F5, 0x0C);
+	WRITEU8(0x5879F6, 0x14);
+	WRITEU8(0x5879F7, 0x15);
+	WRITEU8(0x5879F8, 0x17);
+}
+
+void	timeMod(void)
+{
+	if (is_pressed(L + DR))
+		ADD16(0x0587964, 0x20);
+	if (is_pressed(L + DL))
+		SUB16(0x0587964, 0x20);
+}
+
+void	infinite_explosives(void)
+{
+	u32 offset;
+	if (READU32(0xFFFE538) != 0)
+	{
+		offset = READU32(0xFFFE538);
+		WRITEU8(offset + 0x910, 0x0);
+	}
+}
+
+void	coloredGaunlet_common(u8 value)
+{
+	WRITEU16(0x587A10, (0xE500 + value));
+}
+
+void	purple_gaunlet(void)
+{
+	coloredGaunlet_common(0x1B);
+}
+
+void	green_gaunlet(void)
+{
+	coloredGaunlet_common(0x5B);
+}
+
+void	blue_gaunlet(void)
+{
+	coloredGaunlet_common(0x9B);
+}
+
+void	black_gaunlet(void)
+{
+	coloredGaunlet_common(0xDB);
+}
