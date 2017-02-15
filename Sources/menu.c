@@ -34,12 +34,14 @@ void	my_menus(void)
 			new_entry("Infinite Bomb", infinite_bomb);
 			new_entry("Infinite Bombchu", infinite_bombchu);
 			new_entry("Infinite slingshot munition", infinite_slingshot);
+			new_entry("Infinite Explosives", infinite_explosives);
 		exit_spoiler();
 		new_entry("100 Gold Skulltulas", skulltulas);
 		new_entry("Max rupees", max_rupees);
 		new_entry("Giant's knife never breaks", giants_knife_never_breaks);
 		new_entry("Open any chest many times", open_any_chest_in_the_game_as_many_times);
 		new_entry("Collect hearts many times", collect_heart_pieces_in_overworld_as_many);
+		new_entry("Equip any item", use_all_items);
 	exit_spoiler();
 	new_spoiler("Environment"); 
 		new_spoiler("Time");
@@ -47,6 +49,7 @@ void	my_menus(void)
 			new_entry("Daytime (R + UP)", daytime);
 			new_entry("Sunset (R + RIGHT)", sunset);
 			new_entry("Night (R + DOWN)", night);
+			new_entry("Control Time (L + RIGHT/LEFT)", timeMod);
 		exit_spoiler();
 		new_entry("Always raining", always_raining);
 	exit_spoiler();
@@ -71,7 +74,8 @@ void	my_menus(void)
 			new_entry("Unlock all swords", unlock_all_swords);
 			new_entry("Unlock all shields", unlock_all_shields);
 			new_entry("Unlock all suits", unlock_all_suits);
-			new_entry("Unlock all bests", unlock_all_best);			
+			new_entry("Unlock all bests", unlock_all_best);
+			new_entry("Unlock all items", unlock_all_items);		
 		new_spoiler("Story");
 			new_entry("Unlock all stones", unlock_all_stones);
 			new_entry("Unlock all medallions", unlock_all_medallions);
@@ -83,6 +87,12 @@ void	my_menus(void)
 			new_radio_entry("Normal Link", normal_link);
 			new_radio_entry("Mini Link", mini_link);
 			new_radio_entry("Paper Link", paper_link);			
+		exit_spoiler();
+		new_spoiler("Gauntlet color modifier");
+			new_radio_entry("Purple", purple_gaunlet);
+			new_radio_entry("Green", green_gaunlet);
+			new_radio_entry("Blue", blue_gaunlet);
+			new_radio_entry("Black", black_gaunlet);
 		exit_spoiler();
 		new_radio_entry("Always have child voice", always_child_link_voice);
 		index = new_radio_entry("Always have adult voice", always_adult_link_voice);
