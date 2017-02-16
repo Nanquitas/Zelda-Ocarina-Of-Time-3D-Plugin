@@ -33,6 +33,7 @@ static const char * const notes[] =
 	"New and untested !!!",
 	"New and untested !!!",
 	"New and untested !!!",
+	"Don't like what you have in your inventory? Change it with Y + DPAD Up/Down.",
 	"Equip any item you want! \n\nYou may softlock if you use adult items with young Link.",
 	"Environment",
 	"Time codes",

@@ -2,10 +2,13 @@
 #define CHEATS_H
 
 #include "plugin.h"
+#include <string.h>
 
 
 #define		ADD16(addr, value)					*(u16 *)addr += value
 #define		SUB16(addr, value)					*(u16 *)addr -= value
+#define		ADDU8(addr, value)					*(u8 *)addr += value
+#define		SUBU8(addr, value)					*(u8 *)addr -= value
 
 void	unlock_kokiri_sword();
 void	unlock_excalibur_sword();
@@ -82,5 +85,6 @@ void	purple_gaunlet(void);
 void	green_gaunlet(void);
 void	blue_gaunlet(void);
 void	black_gaunlet(void);
+void	inventoryMod(void);
 
 #endif

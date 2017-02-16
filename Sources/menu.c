@@ -41,6 +41,7 @@ void	my_menus(void)
 		new_entry("Giant's knife never breaks", giants_knife_never_breaks);
 		new_entry("Open any chest many times", open_any_chest_in_the_game_as_many_times);
 		new_entry("Collect hearts many times", collect_heart_pieces_in_overworld_as_many);
+		new_entry("Inventory Mod (Y + Up / Down)", inventoryMod);
 		new_entry("Equip any item", use_all_items);
 	exit_spoiler();
 	new_spoiler("Environment"); 
